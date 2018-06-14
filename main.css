@@ -1,0 +1,35 @@
+html, body {
+  display:block;
+    font-family: Roboto;
+}
+
+.question {
+  display: block;
+  width:600px;
+}
+
+
+.question-title {
+  width:100%; 
+}
+
+.question-score {
+  display: block;
+  font-size:32px;
+  font-weight: bold;
+  vertical-align: middle;
+}
+.question-score {}
+
+.question-tick_box {
+    display: inline-block;
+}
+
+.question-tick_box label {
+    display: block;
+  
+}
+
+.question-explain {
+  width: 100%;
+}
