@@ -1,69 +1,149 @@
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-        <link rel="stylesheet" href="main.css">
-        <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-    </head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.purple-amber.min.css" />
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  </head>
   <body>
-      <form method="post" action="process.php">
-<div class="question">
-  <div class="question-title">
-    <h4>I find it too time consuming to meet new artists/musicians</h4>
-  </div>
-  <div class="question-score">
-    <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" for="icon-toggle-1">
-      <input type="checkbox" id="icon-toggle-1" class="mdl-icon-toggle__input" checked>
-      <i class="mdl-icon-toggle__label">1</i>
-    </label>
-    <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" for="icon-toggle-2">
-      <input type="checkbox" id="icon-toggle-2" class="mdl-icon-toggle__input" checked>
-      <i class="mdl-icon-toggle__label">2</i>
-    </label>
-    <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" for="icon-toggle-3">
-      <input type="checkbox" id="icon-toggle-3" class="mdl-icon-toggle__input" checked>
-      <i class="mdl-icon-toggle__label">3</i>
-    </label>
-    <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" for="icon-toggle-4">
-      <input type="checkbox" id="icon-toggle-4" class="mdl-icon-toggle__input" checked>
-      <i class="mdl-icon-toggle__label">4</i>
-    </label>
-    <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" for="icon-toggle-5">
-      <input type="checkbox" id="icon-toggle-5" class="mdl-icon-toggle__input" checked>
-      <i class="mdl-icon-toggle__label">5</i>
-    </label>
-  </div>
-  <div class="question-tick_box">
-      <p>Please tick boxes relevant to you.</p>
-
-        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
-          <input type="radio" id="option-1" class="mdl-radio__button" name="options" value="1" checked>
-          <span class="mdl-radio__label">My job/education etc...</span>
-        </label>
-        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
-          <input type="radio" id="option-2" class="mdl-radio__button" name="options" value="1" checked>
-          <span class="mdl-radio__label">no one local</span>
-        </label>
-        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-3">
-          <input type="radio" id="option-3" class="mdl-radio__button" name="options" value="1" checked>
-          <span class="mdl-radio__label">no time for social media networking</span>
-        </label>
-
-  </div>
-  <div class="question-explain">
-      <div class="mdl-textfield mdl-js-textfield">
-        <textarea class="mdl-textfield__input" type="text" rows= "3" id="sample5" ></textarea>
-        <label class="mdl-textfield__label" for="sample5">Explain...</label>
-      </div>
-  </div>
-</div>
-<input type="submit" value="Submit" />
-</form>
+    <div class="demo-layout mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100">
+      <header class="demo-header mdl-layout__header mdl-layout__header--scroll">
+        <div class="mdl-layout__header-row">
+          <!-- TODO: add logo-->
+          <img class="header-logo" src="./logo_top.png" />
+          <span class="header-title mdl-layout-title">COLLABO</span>
+        </div>
+      </header>
+      <div class="demo-ribbon"></div>
+      <main class="demo-main mdl-layout__content">
+        <div class="demo-container mdl-grid">
+          <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+          <div class="demo-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
+            <p>Out of the following statements please rate out of 1-5 how relevant they are to you. 5 being most relevant and 1 being least relevant:</p>
+            <form method="post" action="process.php" target="">
+              <div class="q1 question">
+                <div class="question-title">
+                  <h4>I find it too time consuming to meet new artists / musicians</h4>
+                </div>
+                <div class="question-score">
+                  <label class="question-score-label mdl-js-ripple-effect">
+                    <input id="q1-score-1" type="radio" class="mdl-color-text--purple-400" name="options" value="1" />
+                    <div for="q1-score-1" class=""><span>1</span></div>
+                  </label>
+                  <label class="question-score-label">
+                    <input id="q1-score-2" type="radio" class="" name="options" value="2" />
+                    <div for="q1-score-2" class=""><span>2</span></div>
+                  </label>
+                  <label class="question-score-label">
+                    <input id="q1-score-3" type="radio" class="" name="options" value="3" />
+                    <div for="q-score-3" class=""><span>3</span></div>
+                  </label>
+                  <label class="question-score-label">
+                    <input id="q1-score-4" type="radio" class="" name="options" value="4" />
+                    <div for="q1-score-4" class=""><span>4</span></div>
+                  </label>
+                  <label class="question-score-label">
+                    <input id="q1-score-5" type="radio" class="" name="options" value="5" />
+                    <div for="q1-score-5" class=""><span>5</span></div>
+                  </label>
+                </div>
+                <div class="question-tick_box">
+                  <p>Please tick boxes relevant to you.</p>
+                  <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
+                    <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" />
+                    <span class="mdl-checkbox__label">My job/education etc...</span>
+                  </label>
+                  <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2">
+                    <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input" />
+                    <span class="mdl-checkbox__label">no one local</span>
+                  </label>
+                  <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2">
+                    <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input" />
+                    <span class="mdl-checkbox__label">no time for social media networking</span>
+                  </label>
+                </div>
+                <div class="question-explain">
+                  <div class="mdl-textfield mdl-js-textfield">
+                    <textarea class="mdl-textfield__input" type="text" rows= "3" id="sample5" ></textarea>
+                    <label class="mdl-textfield__label" for="sample5">Explain...</label>
+                  </div>
+                </div>
+              </div>
+              <div class="q1 question">
+                <div class="question-title">
+                  <h4>I find it too time consuming to meet new artists / musicians</h4>
+                </div>
+                <div class="question-score">
+                  <label class="question-score-label mdl-js-ripple-effect">
+                    <input id="q1-score-1" type="radio" class="mdl-color-text--purple-400" name="options" value="1" />
+                    <div for="q1-score-1" class=""><span>1</span></div>
+                  </label>
+                  <label class="question-score-label">
+                    <input id="q1-score-2" type="radio" class="" name="options" value="2" />
+                    <div for="q1-score-2" class=""><span>2</span></div>
+                  </label>
+                  <label class="question-score-label">
+                    <input id="q1-score-3" type="radio" class="" name="options" value="3" />
+                    <div for="q-score-3" class=""><span>3</span></div>
+                  </label>
+                  <label class="question-score-label">
+                    <input id="q1-score-4" type="radio" class="" name="options" value="4" />
+                    <div for="q1-score-4" class=""><span>4</span></div>
+                  </label>
+                  <label class="question-score-label">
+                    <input id="q1-score-5" type="radio" class="" name="options" value="5" />
+                    <div for="q1-score-5" class=""><span>5</span></div>
+                  </label>
+                </div>
+                <div class="question-tick_box">
+                  <p>Please tick boxes relevant to you.</p>
+                  <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
+                    <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" checked>
+                    <span class="mdl-checkbox__label">Some crap</span>
+                  </label>
+                  <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2">
+                    <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input" checked>
+                    <span class="mdl-checkbox__label">Some other crap</span>
+                  </label>
+                </div>
+                <div class="question-explain">
+                  <div class="mdl-textfield mdl-js-textfield">
+                    <textarea class="mdl-textfield__input" type="text" rows= "3" id="sample5" ></textarea>
+                    <label class="mdl-textfield__label" for="sample5">Explain...</label>
+                  </div>
+                </div>
+              </div>
+              <div class="details">
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input class="mdl-textfield__input" type="text" id="sample3">
+                  <label class="mdl-textfield__label" for="sample3">Text...</label>
+                </div>
+              </div>
+              <!--<input type="submit" value="Submit" />-->
+              <input type="submit" value="Submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" />
+            </form>
     <!--<label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" for="icon-toggle-1">
       <input type="checkbox" id="icon-toggle-1" class="mdl-icon-toggle__input" checked>
       <i class="mdl-icon-toggle__label">1</i>
     </label>-->
+
+          </div>
+        </div>
+        <footer class="demo-footer mdl-mini-footer">
+          <div class="mdl-mini-footer--left-section">
+            <ul class="mdl-mini-footer--link-list">
+              <li><a href="#">info</a></li>
+              <li><a href="#" class="fa fa-facebook"></a></li>
+              <li><a href="#" class="fa fa-twitter"></a></li>
+            </ul>
+          </div>
+        </footer>
+      </main>
+    </div>
   </body>
 </html>

@@ -1,25 +1,82 @@
 html, body {
   display:block;
-    font-family: Roboto;
+  font-family: 'Inconsolata', monospace;
+}
+
+.header-title {
+  font-weight: bold;
+  font-size: 32px;
+  font-family: Roboto;
+  letter-spacing: 3px;
+}
+
+.header-logo {
+  height: 100%;
+  margin-right: 15px;
+  margin-left: 5px;
 }
 
 .question {
   display: block;
-  width:600px;
+  width:100%;
+  padding-top: 5px;
+  border-top: 4px dotted rgb(255,215,64);
 }
 
 
 .question-title {
-  width:100%; 
+  width:100%;
 }
 
 .question-score {
-  display: block;
-  font-size:32px;
+  display: flex;
+  justify-content: space-evenly;
+  //justify-content: center;
+  font-size:26px;
   font-weight: bold;
   vertical-align: middle;
+  height: auto;
+  margin-top: 5px;
+  margin-bottom: 10px;
 }
-.question-score {}
+
+.question-score-label div {
+  display: inline-block;
+  text-align: center;
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  padding: 5px;
+  //border-style: solid;
+  //border-width: 1px;
+  text-align:center;
+  vertical-align: middle;
+  transition: background .1s ease-in;
+  transition: background .5s ease-out;
+}
+
+.question-score-label div:hover {
+  background: #dbdbdb;
+}
+
+.question-score-label div span {
+  display: inline-block;
+  vertical-align: middle;
+    text-align: center;
+  line-height: normal;
+}
+
+.question-score-label  input {
+  visibility: hidden;
+  position: absolute;
+  height: auto;
+  width: auto;
+}
+
+.question-score-label > input:checked + div {
+  background-color: #ab47bc;
+  color: white;
+}
 
 .question-tick_box {
     display: inline-block;
@@ -27,9 +84,74 @@ html, body {
 
 .question-tick_box label {
     display: block;
-  
+
 }
 
 .question-explain {
   width: 100%;
+}
+
+.demo-ribbon {
+  width: 100%;
+  height: 40vh;
+  //background-color: #3F51B5;
+  flex-shrink: 0;
+}
+
+.demo-main {
+  margin-top: -35vh;
+  flex-shrink: 0;
+}
+
+.demo-header .mdl-layout__header-row {
+  padding-left: 40px;
+}
+
+.demo-container {
+  max-width: 1600px;
+  width: calc(100% - 16px);
+  margin: 0 auto;
+}
+
+.demo-content {
+  border-radius: 2px;
+  padding: 80px 56px;
+  margin-bottom: 80px;
+}
+
+.demo-layout.is-small-screen .demo-content {
+  padding: 40px 28px;
+}
+
+.demo-content h3 {
+  margin-top: 48px;
+}
+
+.demo-footer {
+  padding-left: 40px;
+}
+
+.demo-footer .mdl-mini-footer--link-list a {
+  font-size: 13px;
+}
+
+.mdl-layout-title {
+  font-family: 'Inconsolata', monospace;
+}
+
+h3, h4 {
+  font-family: 'Inconsolata', monospace;
+}
+
+.mdl-textfield {
+  width: 100%;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
 }
