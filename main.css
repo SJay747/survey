@@ -1,6 +1,7 @@
 html, body {
   display:block;
-  font-family: 'Inconsolata', monospace;
+  //font-family: 'Inconsolata', monospace;
+  font-family: 'Roboto Mono', monospace;
 }
 
 .header-title {
@@ -20,7 +21,7 @@ html, body {
   display: block;
   width:100%;
   padding-top: 5px;
-  border-top: 4px dotted rgb(255,215,64);
+  border-top: 4px solid rgb(255,215,64);
   margin-bottom: 20px;
 }
 

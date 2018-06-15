@@ -8,8 +8,15 @@ $mysql_database = "collabo_survey";
 //process.php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {//Check it is coming from a form
     $u_name = $_POST["survey_name"];
+    $u_age  = $_POST["survey_age"];
+    $u_postcode = $_POST["survey_postcode"];
+    $u_name = $_POST["survey_name"];
+    $u_genre = $_POST["survey_genre"];
+    $u_skill = $_POST["survey_skill"];
+    $u_genre = $_POST["survey_genre"];
+    $u_years = $_POST["survey_years"];
+    $u_hours = $_POST["survey_hours"];
     $u_email = $_POST["survey_email"];
-    $u_text = $_POST["user_text"];
 
     $q1_score = $_POST["q1_score"];
     $q1_tickbox = implode(', ', $_POST["q1_tickbox"]);
@@ -74,7 +81,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {//Check it is coming from a form
       q12_score, q12_tickbox,
       q13_score, q13_tickbox,
       q14_score,
-      q15_score, q15_explain)
+      q15_score, q15_explain,
+
+    )
       VALUES(?, ?,
         ?,
         ?, ?,
