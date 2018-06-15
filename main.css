@@ -21,8 +21,8 @@ html, body {
   width:100%;
   padding-top: 5px;
   border-top: 4px dotted rgb(255,215,64);
+  margin-bottom: 20px;
 }
-
 
 .question-title {
   width:100%;
