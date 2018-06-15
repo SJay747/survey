@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {//Check it is coming from a form
     $u_name = $_POST["survey_name"]; //set PHP variables like this so we can use them anywhere in code below
     $u_email = $_POST["survey_email"];
     $u_text = $_POST["user_text"];
-    $q1_score = $_POST["q1q1_score"];
+    $q1_score = $_POST["q1_score"];
     $q1_tickbox = implode(', ', $_POST["q1_tickbox"]);
     $q1_explain = $_POST["q1_explain"];
 
