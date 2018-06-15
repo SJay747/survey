@@ -26,51 +26,52 @@
           <div class="demo-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
             <p>Out of the following statements please rate out of 1-5 how relevant they are to you. 5 being most relevant and 1 being least relevant:</p>
             <form method="post" action="process.php" target="">
+              <h3>Questionaire</h3>
               <div class="q1 question">
                 <div class="question-title">
                   <h4>I find it too time consuming to meet new artists / musicians</h4>
                 </div>
                 <div class="question-score">
                   <label class="question-score-label mdl-js-ripple-effect">
-                    <input id="q1-score-1" type="radio" class="mdl-color-text--purple-400" name="options" value="1" />
+                    <input id="q1-score-1" type="radio" name="q1_score" value="1" />
                     <div for="q1-score-1" class=""><span>1</span></div>
                   </label>
                   <label class="question-score-label">
-                    <input id="q1-score-2" type="radio" class="" name="options" value="2" />
+                    <input id="q1-score-2" type="radio" name="q1_score" value="2" />
                     <div for="q1-score-2" class=""><span>2</span></div>
                   </label>
                   <label class="question-score-label">
-                    <input id="q1-score-3" type="radio" class="" name="options" value="3" />
+                    <input id="q1-score-3" type="radio" name="q1_score" value="3" />
                     <div for="q-score-3" class=""><span>3</span></div>
                   </label>
                   <label class="question-score-label">
-                    <input id="q1-score-4" type="radio" class="" name="options" value="4" />
+                    <input id="q1-score-4" type="radio" name="q1_score" value="4" />
                     <div for="q1-score-4" class=""><span>4</span></div>
                   </label>
                   <label class="question-score-label">
-                    <input id="q1-score-5" type="radio" class="" name="options" value="5" />
+                    <input id="q1-score-5" type="radio" name="q1_score" value="5" />
                     <div for="q1-score-5" class=""><span>5</span></div>
                   </label>
                 </div>
                 <div class="question-tick_box">
                   <p>Please tick boxes relevant to you.</p>
                   <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
-                    <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" />
+                    <input type="checkbox" id="checkbox-1" name="q1_tickbox" value="a" class="mdl-checkbox__input" />
                     <span class="mdl-checkbox__label">My job/education etc...</span>
                   </label>
                   <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2">
-                    <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input" />
+                    <input type="checkbox" id="checkbox-2" name="q1_tickbox" value="b" class="mdl-checkbox__input" />
                     <span class="mdl-checkbox__label">no one local</span>
                   </label>
                   <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2">
-                    <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input" />
+                    <input type="checkbox" id="checkbox-2" name="q1_tickbox" value="c" class="mdl-checkbox__input" />
                     <span class="mdl-checkbox__label">no time for social media networking</span>
                   </label>
                 </div>
                 <div class="question-explain">
                   <div class="mdl-textfield mdl-js-textfield">
-                    <textarea class="mdl-textfield__input" type="text" rows= "3" id="sample5" ></textarea>
-                    <label class="mdl-textfield__label" for="sample5">Explain...</label>
+                    <textarea class="mdl-textfield__input" type="text" rows= "3" id="explain" name="q1_explain"></textarea>
+                    <label class="mdl-textfield__label" for="explain">Explain...</label>
                   </div>
                 </div>
               </div>
@@ -119,13 +120,61 @@
                 </div>
               </div>
               <div class="details">
-                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                  <input class="mdl-textfield__input" type="text" id="sample3">
-                  <label class="mdl-textfield__label" for="sample3">Text...</label>
+                <h3>Details</h3>
+                <div class="details-box">
+                  <div class="details-name mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="text" id="details-name">
+                    <label class="mdl-textfield__label" for="details-name">Name</label>
+                  </div>
+                  <div class="details-age mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="details-age">
+                    <label class="mdl-textfield__label" for="details-age">Age</label>
+                    <span class="mdl-textfield__error">Input is not a number</span>
+                  </div>
+                  <div class="details-postcode mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="text" name="survey_postcode" pattern="([Gg][Ii][Rr] 0[Aa]{2})|((([A-Za-z][0-9]{1,2})|(([A-Za-z][A-Ha-hJ-Yj-y][0-9]{1,2})|(([A-Za-z][0-9][A-Za-z])|([A-Za-z][A-Ha-hJ-Yj-y][0-9]?[A-Za-z]))))\s?[0-9][A-Za-z]{2})" id="details-postcode">
+                    <label class="mdl-textfield__label" for="details-postcode">Postcode</label>
+                    <span class="mdl-textfield__error">Input is not a postcode</span>
+                  </div>
+                </div>
+                <div class="details-box">
+                  <p class="details-genre_text">Please state your main genre:</p>
+                  <div class="details-genre mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="text" name="survey_genre" id="details-genre">
+                    <label class="mdl-textfield__label" for="details-genre">Genre</label>
+                  </div>
+                </div>
+                <div class="details-box">
+                  <p class="details-skill_text">Please state your main skill:</p>
+                  <div class="details-skill mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="text" name="survey_skill" id="details-skill">
+                    <label class="mdl-textfield__label" for="details-skill">Skill</label>
+                  </div>
+                </div>
+                <div class="details-box">
+                  <p class="details-length_text">How long have you making music?</p>
+                  <div class="details-length mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="text" name="survey_years" pattern="-?[0-9]*(\.[0-9]+)?" id="details-skill">
+                    <label class="mdl-textfield__label" for="details-length">Years</label>
+                    <span class="mdl-textfield__error">Input is not a number</span>
+                  </div>
+                </div>
+                <div class="details-box">
+                  <p class="details-week_text">How many hours do you spend making music a week?</p>
+                  <div class="details-week mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="text" name="survey_hours" pattern="-?[0-9]*(\.[0-9]+)?" id="details-skill">
+                    <label class="mdl-textfield__label" for="details-week">hours</label>
+                    <span class="mdl-textfield__error">Input is not a number</span>
+                  </div>
+                </div>
+                <div class="details-email mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input class="mdl-textfield__input" type="text" name="survey_email" pattern="(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)" id="details-email">
+                  <label class="mdl-textfield__label" for="details-email">Email Address</label>
+                  <span class="mdl-textfield__error">Input is not an email address</span>
                 </div>
               </div>
               <!--<input type="submit" value="Submit" />-->
-              <input type="submit" value="Submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" />
+              <input type="submit" value="Submit" class="questionaire-submit mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" />
             </form>
     <!--<label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" for="icon-toggle-1">
       <input type="checkbox" id="icon-toggle-1" class="mdl-icon-toggle__input" checked>

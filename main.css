@@ -155,3 +155,71 @@ h3, h4 {
     text-decoration: none;
     border-radius: 50%;
 }
+
+.details-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+.details-name {
+  flex-grow: 2;
+  margin-right: 15px;
+  width: 40%;
+}
+
+.details-age {
+  flex-grow: 1;
+  margin-right: 15px;
+  width: 20%;
+}
+
+.details-postcode {
+  flex-grow: 1;
+  width: 20%;
+}
+
+.details-genre_text {
+  margin-right: 16px;
+}
+
+.details-genre {
+  width: 20%;
+  margin-right: 26px;
+  flex-grow: 1;
+}
+
+.details-skill_text {
+  margin-right: 16px;
+}
+
+.details-skill {
+  width: 20%;
+    margin-right: 26px;
+    flex-grow: 1;
+}
+
+.details-length_text {
+  margin-right: 16px;
+}
+
+.details-week_text {
+  margin-right: 16px;
+}
+
+.details-length {
+  width: 20%;
+  margin-right: 26px;
+  flex-grow: 1;
+}
+
+.details-week {
+  width: 20%;
+  margin-right: 26px;
+  flex-grow: 1;
+}
+
+.questionaire-submit {
+  margin-top: 20px;
+}
