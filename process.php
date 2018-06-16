@@ -7,7 +7,6 @@ $mysql_database = "collabo_survey";
 
 //process.php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {//Check it is coming from a form
-    $u_name = $_POST["survey_name"];
     $u_age  = $_POST["survey_age"];
     $u_postcode = $_POST["survey_postcode"];
     $u_name = $_POST["survey_name"];
@@ -67,56 +66,56 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {//Check it is coming from a form
         die('Error : ('. $mysqli->connect_errno .') '. $mysqli->connect_error);
     }
 
-    $statement = $mysqli->prepare("INSERT INTO survey_data (q1_score, q1_tickbox,
-      q2_score,
-      q3_score,  q3_tickbox,
-      q4_score,
-      q5_score,  q5_tickbox,  q5_explain,
-      q6_score,  q6_explain,
-      q7_score,  q7_tickbox,  q7_explain,
-      q8_score,
-      q9_score,  q9_explain,
-      q10_score, q10_explain,
-      q11_score,
-      q12_score, q12_tickbox,
-      q13_score, q13_tickbox,
-      q14_score,
-      q15_score, q15_explain,
-
+    $statement = $mysqli->prepare("INSERT INTO survey_data (
+      q1_score,   q1_tickbox,   q1_explain,
+      q2_score,   q2_tickbox,   q2_explain,
+      q3_score,   q3_tickbox,   q3_explain,
+      q4_score,   q4_tickbox,   q4_explain,
+      q5_score,   q5_tickbox,   q5_explain,
+      q6_score,   q6_tickbox,   q6_explain,
+      q7_score,   q7_tickbox,   q7_explain,
+      q8_score,   q8_tickbox,   q8_explain,
+      q9_score,   q9_tickbox,   q9_explain,
+      q10_score,  q10_tickbox,  q10_explain,
+      q11_score,  q11_tickbox,  q11_explain,
+      q12_score,  q12_tickbox,  q12_explain,
+      q13_score,  q13_tickbox,  q13_explain,
+      q14_score,  q14_tickbox,  q14_5explain,
+      q15_score,  q15_tickbox,  q15_explain
     )
-      VALUES(?, ?,
-        ?,
-        ?, ?,
-        ?,
+      VALUES(?, ?, ?,
         ?, ?, ?,
-        ?, ?,
         ?, ?, ?,
-        ?,
-        ?, ?,
-        ?, ?,
-        ?,
-        ?, ?,
-        ?, ?,
-        ?,
-        ?, ?
+        ?, ?, ?,
+        ?, ?, ?,
+        ?, ?, ?,
+        ?, ?, ?,
+        ?, ?, ?,
+        ?, ?, ?,
+        ?, ?, ?,
+        ?, ?, ?,
+        ?, ?, ?,
+        ?, ?, ?,
+        ?, ?, ?,
+        ?, ?, ?,
       )"); //prepare sql insert query
     //bind parameters for markers, where (s = string, i = integer, d = double,  b = blob)
-    $statement->bind_param('isiisiissisissiisisiisisiis',
-      $q1_score,  $q1_tickbox,
-      $q2_score,
-      $q3_score,  $q3_tickbox,
-      $q4_score,
+    $statement->bind_param('ississississississississississississississississississ',
+      $q1_score,  $q1_tickbox, "",
+      $q2_score, "", "",
+      $q3_score,  $q3_tickbox, "",
+      $q4_score, "", "",
       $q5_score,  $q5_tickbox,  $q5_explain,
-      $q6_score,  $q6_explain,
+      $q6_score,  $q6_explain, "",
       $q7_score,  $q7_tickbox,  $q7_explain,
-      $q8_score,
-      $q9_score,  $q9_explain,
-      $q10_score, $q10_explain,
-      $q11_score,
-      $q12_score, $q12_tickbox,
-      $q13_score, $q13_tickbox,
-      $q14_score,
-      $q15_score, $q15_explain
+      $q8_score, "", "",
+      $q9_score,  $q9_explain, "",
+      $q10_score, $q10_explain, "",
+      $q11_score, "", "",
+      $q12_score, $q12_tickbox, "",
+      $q13_score, $q13_tickbox, "",
+      $q14_score, "", "",
+      $q15_score, $q15_explain, "",
   ); //bind values and execute insert query
 
     if($statement->execute()){
