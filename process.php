@@ -97,7 +97,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {//Check it is coming from a form
         ?, ?, ?,
         ?, ?, ?,
         ?, ?, ?,
-        ?, ?, ?,
+        ?, ?, ?
       )"); //prepare sql insert query
     //bind parameters for markers, where (s = string, i = integer, d = double,  b = blob)
     $statement->bind_param('ississississississississississississississississississ',
@@ -115,7 +115,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {//Check it is coming from a form
       $q12_score, $q12_tickbox, "",
       $q13_score, $q13_tickbox, "",
       $q14_score, "", "",
-      $q15_score, $q15_explain, "",
+      $q15_score, $q15_explain, ""
   ); //bind values and execute insert query
 
     if($statement->execute()){
