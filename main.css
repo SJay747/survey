@@ -1,7 +1,8 @@
 html, body {
   display:block;
   //font-family: 'Inconsolata', monospace;
-  font-family: 'Roboto Mono', monospace;
+  //font-family: 'Roboto Mono', monospace;
+  font-family: 'Montserrat', monospace;
 }
 
 .header-title {
@@ -9,6 +10,10 @@ html, body {
   font-size: 32px;
   font-family: Roboto;
   letter-spacing: 3px;
+}
+
+.demo-content h3 {
+    margin-top: 0px;
 }
 
 .header-logo {
@@ -33,7 +38,7 @@ html, body {
   display: flex;
   justify-content: space-evenly;
   //justify-content: center;
-  font-size:26px;
+  font-size:24px;
   font-weight: bold;
   vertical-align: middle;
   height: auto;
@@ -124,10 +129,6 @@ html, body {
   padding: 40px 28px;
 }
 
-.demo-content h3 {
-  margin-top: 48px;
-}
-
 .demo-footer {
   padding-left: 40px;
 }
@@ -137,11 +138,13 @@ html, body {
 }
 
 .mdl-layout-title {
-  font-family: 'Inconsolata', monospace;
+  //font-family: 'Inconsolata', monospace;
+  font-family: 'Montserrat', monospace;
 }
 
 h3, h4 {
-  font-family: 'Inconsolata', monospace;
+  //font-family: 'Inconsolata', monospace;
+  font-family: 'Montserrat', monospace;
 }
 
 .mdl-textfield {
@@ -188,7 +191,7 @@ h3, h4 {
 .details-genre {
   width: 20%;
   margin-right: 26px;
-  flex-grow: 1;
+  //flex-grow: 1;
 }
 
 .details-skill_text {
@@ -197,8 +200,8 @@ h3, h4 {
 
 .details-skill {
   width: 20%;
-    margin-right: 26px;
-    flex-grow: 1;
+  margin-right: 26px;
+  //flex-grow: 1;
 }
 
 .details-length_text {
@@ -212,13 +215,13 @@ h3, h4 {
 .details-length {
   width: 20%;
   margin-right: 26px;
-  flex-grow: 1;
+  //flex-grow: 1;
 }
 
 .details-week {
   width: 20%;
   margin-right: 26px;
-  flex-grow: 1;
+  //flex-grow: 1;
 }
 
 .questionaire-submit {
