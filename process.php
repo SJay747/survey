@@ -7,6 +7,8 @@ $mysql_database = "collabo_survey";
 
 //process.php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {//Check it is coming from a form
+
+    /*
     $u_age  = $_POST["survey_age"];
     $u_postcode = $_POST["survey_postcode"];
     $u_name = $_POST["survey_name"];
@@ -16,10 +18,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {//Check it is coming from a form
     $u_years = $_POST["survey_years"];
     $u_hours = $_POST["survey_hours"];
     $u_email = $_POST["survey_email"];
+    */
 
     $q1_score = $_POST["q1_score"];
     $q1_tickbox = implode(', ', $_POST["q1_tickbox"]);
 
+    /*
     $q2_score = $_POST["q2_score"];
 
     $q3_score = $_POST["q3_score"];
@@ -58,6 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {//Check it is coming from a form
 
     $q15_score = $_POST["q15_score"];
     $q15_explain = $_POST["q15_explain"];
+    */
 
     $mysqli = new mysqli($mysql_host, $mysql_username, $mysql_password, $mysql_database);
 
