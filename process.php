@@ -77,8 +77,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {//Check it is coming from a form
     $statement->bind_param('issississississississississississississississ', $q1_score,  $q1_tickbox, "", $q2_score, "", "", $q3_score,  $q3_tickbox, "", $q4_score, "", "", $q5_score,  $q5_tickbox,  $q5_explain, $q6_score,  $q6_explain, "", $q7_score,  $q7_tickbox,  $q7_explain, $q8_score,"", "", $q9_score,  $q9_explain, "", $q10_score, $q10_explain, "", $q11_score, "", "", $q12_score, $q12_tickbox, "", $q13_score, $q13_tickbox, "", $q14_score, "", "", $q15_score, $q15_explain, "" ); //bind values and execute insert query
     */
 
-    $statement = $mysqli->prepare("INSERT INTO survey_data (q1_score, q1_tickbox, q1_explain) VALUES(?, ?, ?)");
-    $statement->bind_param('iss', $q1_score,  $q1_tickbox, "");
+    $statement = $mysqli->prepare("INSERT INTO survey_data (q1_score, q1_tickbox) VALUES(?, ?)");
+    $statement->bind_param('is', $q1_score,  $q1_tickbox);
 
     if($statement->execute()){
         print "Hello " . $u_name . "!, your message has been saved!";
