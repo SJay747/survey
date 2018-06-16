@@ -158,6 +158,7 @@ h3, h4 {
     text-align: center;
     text-decoration: none;
     border-radius: 50%;
+    display: inline-block;
 }
 
 .details-box {
@@ -186,44 +187,68 @@ h3, h4 {
 
 .details-genre_text {
   margin-right: 16px;
+  flex-grow: 1;
 }
 
 .details-genre {
   width: 20%;
   margin-right: 26px;
-  //flex-grow: 1;
+  flex-basis: 20%;
+  flex-grow: 1;
 }
 
 .details-skill_text {
   margin-right: 16px;
+  flex-grow: 1;
 }
 
 .details-skill {
   width: 20%;
   margin-right: 26px;
-  //flex-grow: 1;
+  flex-basis: 20%;
+  flex-grow: 1;
 }
 
 .details-length_text {
   margin-right: 16px;
+  flex-grow: 1;
 }
 
 .details-week_text {
   margin-right: 16px;
+  flex-grow: 1;
 }
 
 .details-length {
   width: 20%;
   margin-right: 26px;
-  //flex-grow: 1;
+  flex-basis: 20%;
+  flex-grow: 1;
 }
 
 .details-week {
   width: 20%;
+  flex-basis: 20%;
+  flex-grow: 1;
   margin-right: 26px;
-  //flex-grow: 1;
 }
 
 .questionaire-submit {
   margin-top: 20px;
+}
+
+.mdl-checkbox {
+  height: auto;
+}
+
+.mdl-mini-footer {
+  align-items: center;
+
+}
+
+.mdl-mini-footer--link-list, .mdl-mini-footer__link-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
 }
