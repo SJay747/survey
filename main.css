@@ -103,12 +103,9 @@ h3, h4 {
   width: 100%;
 }
 
-.question-explain p {
-  margin-top: 10px;
-  margin-bottom: 0px;
-}
-
 .question-explain-label {
+  width: 100%;
+  height: auto;
   margin-top: 10px;
   margin-bottom: 0px;
 }
@@ -261,4 +258,18 @@ h3, h4 {
 
 .question-tick_box-checkbox {
   margin-left: 25px;
+}
+
+.signup-text {
+  border: 3px solid;
+  padding: 5px;
+  padding-top: 15px;
+  margin-bottom: 7px;
+  text-align: center;
+}
+
+.details-email {
+  width: 90%;
+  //margin-right: 5px;
+  //margin-left: 5px;
 }

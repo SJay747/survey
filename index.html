@@ -30,7 +30,7 @@
           <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
           <div class="demo-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
             <h3>Meet musicians, creatives and artists local to you.</h3>
-              <p>Hang out, play music and watch the outcomes. We believe being around creatives sparks <i>creativity</i>. We want to build a platform that brings the music scene together allowing musicians and artists to realise their full potential through each other!</p>
+              <p>Hang out, play music and watch the outcomes. We believe being around creatives sparks <i>creativity</i>.<br> We want to build a platform that brings the music scene together allowing musicians and artists to realise their full potential through each other!</p>
             <form method="post" action="process.php" target="_blank">
               <h3>Questionaire</h3>
               <p><strong>Out of the following statements please rate out of 1-5 how relevant they are to you. 5 being most relevant and 1 being least relevant:</strong></p>
@@ -78,7 +78,7 @@
                   </div>
                 </div>
                 <div class="question-explain">
-                  <p class="question-explain-label"><i>Please explain why:</i></p>
+                  <div class="question-explain-label"><i>Please explain why:</i></div>
                   <div class="mdl-textfield mdl-js-textfield">
                     <textarea class="mdl-textfield__input" type="text" rows= "2" id="q1-explain" name="q1_explain" onkeydown="if (event.keyCode == 13) { return false; }"></textarea>
                     <label class="mdl-textfield__label" for="q1-explain">Why?</label>
@@ -154,7 +154,7 @@
                   </label>
                 </div>
                 <div class="question-explain">
-                  <p class="question-explain-label"><i>Please explain why not:</i></p>
+                  <div class="question-explain-label"><i>Please explain why not:</i></div>
                   <div class="mdl-textfield mdl-js-textfield">
                     <textarea class="mdl-textfield__input" type="text" rows= "2" id="q3-explain" name="q3_explain" onkeydown="if (event.keyCode == 13) { return false; }"></textarea>
                     <label class="mdl-textfield__label" for="q3-explain">Why?</label>
@@ -238,7 +238,7 @@
                   </label>
                 </div>
                 <div class="question-explain">
-                  <p class="question-explain-label"><i>Please explain:</i></p>
+                  <div class="question-explain-label"><i>Please explain:</i></div>
                   <div class="mdl-textfield mdl-js-textfield">
                     <textarea class="mdl-textfield__input" type="text" rows= "2" id="q5-explain" name="q5_explain" onkeydown="if (event.keyCode == 13) { return false; }"></textarea>
                     <label class="mdl-textfield__label" for="q5-explain">Explain...</label>
@@ -272,7 +272,7 @@
                   </label>
                 </div>
                 <div class="question-explain">
-                  <p class="question-explain-label"><i>Please explain:</i></p>
+                  <div class="question-explain-label"><i>Please explain:</i></div>
                   <div class="mdl-textfield mdl-js-textfield">
                     <textarea class="mdl-textfield__input" type="text" rows= "2" id="q6-explain" name="q6_explain"></textarea>
                     <label class="mdl-textfield__label" for="q6-explain">Explain...</label>
@@ -325,7 +325,7 @@
                   </label>
                 </div>
                 <div class="question-explain">
-                  <p class="question-explain-label"><i>Please explain why:</i></p>
+                  <div class="question-explain-label"><i>Please explain why:</i></div>
                   <div class="mdl-textfield mdl-js-textfield">
                     <textarea class="mdl-textfield__input" type="text" rows= "2" id="q7-explain" name="q7_explain"></textarea>
                     <label class="mdl-textfield__label" for="q7-explain">Explain...</label>
@@ -386,7 +386,7 @@
                   </label>
                 </div>
                 <div class="question-explain">
-                  <p class="question-explain-label"><i>Please explain:</i></p>
+                  <div class="question-explain-label"><i>Please explain:</i></div>
                   <div class="mdl-textfield mdl-js-textfield">
                     <textarea class="mdl-textfield__input" type="text" rows= "2" id="q9-explain" name="q9_explain"></textarea>
                     <label class="mdl-textfield__label" for="q9-explain">Explain...</label>
@@ -420,7 +420,7 @@
                   </label>
                 </div>
                 <div class="question-explain">
-                  <p class="question-explain-label"><i>Please explain:</i></p>
+                  <div class="question-explain-label"><i>Please explain:</i></div>
                   <div class="mdl-textfield mdl-js-textfield">
                     <textarea class="mdl-textfield__input" type="text" rows= "2" id="q10-explain" name="q10_explain"></textarea>
                     <label class="mdl-textfield__label" for="q10-explain">Explain...</label>
@@ -600,7 +600,7 @@
                   </label>
                 </div>
                 <div class="question-explain">
-                  <p class="question-explain-label"><i>Please explain:</i></p>
+                  <div class="question-explain-label"><i>Please explain:</i></div>
                   <div class="mdl-textfield mdl-js-textfield">
                     <textarea class="mdl-textfield__input" type="text" rows= "2" id="q15-explain" name="q15_explain"></textarea>
                     <label class="mdl-textfield__label" for="q15-explain">Explain...</label>
@@ -655,13 +655,15 @@
                     <span class="mdl-textfield__error">Input is not a number</span>
                   </div>
                 </div>
-                <p>We are building a platform through which you will be able to connect with other like minded artists in the city. Drop us your email to keep in touch with our progress and launch date - and become eligible to win a full free day in a London recording studio!</p>
-                <p style="text-align:center;"><strong>Your work on great music while we work on <i>Collabo</i>.</strong></p>
-                <p>Please type in your email address:</p>
-                <div class="details-email mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                  <input class="mdl-textfield__input" type="text" name="survey_email" pattern="(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)" id="details-email">
-                  <label class="mdl-textfield__label" for="details-email">Email Address</label>
-                  <span class="mdl-textfield__error">Input is not an email address</span>
+                <div class="signup-text">
+                  <p>We are building a platform through which you will be able to connect with other like minded artists in the city. Drop us your email to keep in touch with our progress and launch date - and become eligible to win a full free day in a London recording studio!</p>
+                  <p style="text-align:center;"><strong>Your work on great music while we work on <i>Collabo</i>.</strong></p>
+                <!--<p>Please type in your email address:</p>-->
+                  <div class="details-email mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="text" name="survey_email" pattern="(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)" id="details-email">
+                    <label class="mdl-textfield__label" for="details-email">Email Address</label>
+                    <span class="mdl-textfield__error">Input is not an email address</span>
+                  </div>
                 </div>
               </div>
               <!--<input type="submit" value="Submit" />-->
