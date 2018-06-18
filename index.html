@@ -31,7 +31,7 @@
           <div class="demo-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
             <h3>Meet musicians, creatives and artists local to you.</h3>
               <p>Hang out, play music and watch the outcomes. We believe being around creatives sparks <i>creativity</i>. We want to build a platform that brings the music scene together allowing musicians and artists to realise their full potential through each other!</p>
-            <form method="post" action="process.php" target="">
+            <form method="post" action="process.php" target="_blank">
               <h3>Questionaire</h3>
               <p><strong>Out of the following statements please rate out of 1-5 how relevant they are to you. 5 being most relevant and 1 being least relevant:</strong></p>
               <div class="q1 question">
@@ -615,7 +615,7 @@
                     <label class="mdl-textfield__label" for="details-name">Name</label>
                   </div>
                   <div class="details-age mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="details-age" name="survey_age">
+                    <input class="mdl-textfield__input" type="number" pattern="-?[0-9]*(\.[0-9]+)?" id="details-age" name="survey_age">
                     <label class="mdl-textfield__label" for="details-age">Age</label>
                     <span class="mdl-textfield__error">Input is not a number</span>
                   </div>
@@ -642,7 +642,7 @@
                 <div class="details-box">
                   <p class="details-length_text">How long have you making music?</p>
                   <div class="details-length mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <input class="mdl-textfield__input" type="text" name="survey_years" pattern="-?[0-9]*(\.[0-9]+)?" id="details-length">
+                    <input class="mdl-textfield__input" type="number" name="survey_years" pattern="-?[0-9]*(\.[0-9]+)?" id="details-length">
                     <label class="mdl-textfield__label" for="details-length">Years</label>
                     <span class="mdl-textfield__error">Input is not a number</span>
                   </div>
@@ -650,7 +650,7 @@
                 <div class="details-box">
                   <p class="details-week_text">How many hours do you spend making music a week?</p>
                   <div class="details-week mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <input class="mdl-textfield__input" type="text" name="survey_hours" pattern="-?[0-9]*(\.[0-9]+)?" id="details-week">
+                    <input class="mdl-textfield__input" type="number" name="survey_hours" pattern="-?[0-9]*(\.[0-9]+)?" id="details-week">
                     <label class="mdl-textfield__label" for="details-week">hours</label>
                     <span class="mdl-textfield__error">Input is not a number</span>
                   </div>

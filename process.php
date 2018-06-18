@@ -1,5 +1,11 @@
 <?php
 
+function console_log( $data ){
+  echo '<script>';
+  echo 'console.log('. json_encode( $data ) .')';
+  echo '</script>';
+}
+
 $mysql_host = "localhost";
 $mysql_username = "collabo_survey_user";
 $mysql_password = "e7TFZOzWxUj49itQ";
@@ -61,6 +67,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {//Check it is coming from a form
     $q15_score = $_POST["q15_score"];
     $q15_explain = $_POST["q15_explain"];
 
+    //print "here";
+	//console_log("here");
+
     $mysqli = new mysqli($mysql_host, $mysql_username, $mysql_password, $mysql_database);
 
     //Output any connection error
@@ -68,10 +77,48 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {//Check it is coming from a form
         die('Error : ('. $mysqli->connect_errno .') '. $mysqli->connect_error);
     }
 
+/*
+console_log($q1_score);
+console_log($q1_tickbox);
+console_log($q1_explain);    
+console_log($q2_score);
+console_log($q3_score);
+console_log($q3_tickbox);
+console_log($q3_explain);    
+console_log($q4_score);
+console_log($q5_score);
+console_log($q5_explain);
+console_log($q6_score);
+console_log($q6_explain);
+console_log($q7_score);
+console_log($q7_tickbox);
+console_log($q7_explain);
+console_log($q8_score);
+console_log($q9_score);
+console_log($q9_explain);
+console_log($q10_score);
+console_log($q10_explain);
+console_log($q11_score);
+console_log($q12_score);
+console_log($q12_tickbox);
+console_log($q13_score);
+console_log($q13_tickbox);
+console_log($q14_score);
+console_log($q15_score);
+console_log($q15_explain);
+console_log($u_age);
+console_log($u_postcode);
+console_log($u_name);
+console_log($u_genre);
+console_log($u_skill);
+console_log($u_years);
+console_log($u_hours);
+console_log($u_email);
+*/
 
-    $statement = $mysqli->prepare("INSERT INTO survey_data (q1_score, q1_tickbox, q1_explain, q2_score, q3_score, q3_tickbox, q3_explain, q4_score, q5_score, q5_tickbox, q5_explain, q6_score, q6_explain, q7_score,  q7_tickbox,  q7_explain, q8_score, q9_score, q9_explain, q10_score, q10_explain, q11_score, q12_score, q12_tickbox, q13_score, q13_tickbox, q14_score, q15_score, q15_explain, u_age, u_postcode, u_name, u_genre, u_skill, u_years, u_hours, u_email) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"); //prepare sql insert query
+	$statement = $mysqli->prepare("INSERT INTO survey_data (q1_score, q1_tickbox, q1_explain, q2_score, q3_score, q3_tickbox, q3_explain, q4_score, q5_score, q5_tickbox, q5_explain, q6_score, q6_explain, q7_score,  q7_tickbox,  q7_explain, q8_score, q9_score, q9_explain, q10_score, q10_explain, q11_score, q12_score, q12_tickbox, q13_score, q13_tickbox, q14_score, q15_score, q15_explain, u_age, u_postcode, u_name, u_genre, u_skill, u_years, u_hours, u_email) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"); //prepare sql insert query
     //bind parameters for markers, where (s = string, i = integer, d = double,  b = blob)
-    $u_name = $_POST["survey_name"];
+
     $statement->bind_param('issiissiissisissiisisiisisiisissssiis', $q1_score,  $q1_tickbox, $q1_explain, $q2_score, $q3_score, $q3_tickbox, $q3_explain, $q4_score, $q5_score,  $q5_tickbox,  $q5_explain, $q6_score,  $q6_explain, $q7_score,  $q7_tickbox,  $q7_explain, $q8_score, $q9_score,  $q9_explain, $q10_score, $q10_explain, $q11_score, $q12_score, $q12_tickbox, $q13_score, $q13_tickbox, $q14_score, $q15_score, $q15_explain, $u_age, $u_postcode, $u_name, $u_genre, $u_skill, $u_years, $u_hours,$u_email); //bind values and execute insert query
 
     /*
@@ -90,5 +137,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {//Check it is coming from a form
     }else{
         print $mysqli->error; //show mysql error if any
     }
+
+
+	//console_log("herer");
+echo "<script>window.close();</script>";
 }
 ?>
