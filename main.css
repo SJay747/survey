@@ -5,15 +5,22 @@ html, body {
   font-family: 'Montserrat', monospace;
 }
 
-.header-title {
-  font-weight: bold;
-  font-size: 32px;
-  font-family: Roboto;
-  letter-spacing: 3px;
+
+h3, h4 {
+  //font-family: 'Inconsolata', monospace;
+  font-family: 'Montserrat', monospace;
 }
 
 .demo-content h3 {
     margin-top: 0px;
+}
+
+.header-title {
+  font-weight: bold;
+  font-size: 32px;
+  //font-family: Roboto;
+  font-family: 'Source Sans Pro', sans-serif;
+  letter-spacing: 3px;
 }
 
 .header-logo {
@@ -90,11 +97,20 @@ html, body {
 
 .question-tick_box label {
     display: block;
-
 }
 
 .question-explain {
   width: 100%;
+}
+
+.question-explain p {
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+.question-explain-label {
+  margin-top: 10px;
+  margin-bottom: 0px;
 }
 
 .demo-ribbon {
@@ -135,16 +151,6 @@ html, body {
 
 .demo-footer .mdl-mini-footer--link-list a {
   font-size: 13px;
-}
-
-.mdl-layout-title {
-  //font-family: 'Inconsolata', monospace;
-  font-family: 'Montserrat', monospace;
-}
-
-h3, h4 {
-  //font-family: 'Inconsolata', monospace;
-  font-family: 'Montserrat', monospace;
 }
 
 .mdl-textfield {
@@ -251,4 +257,8 @@ h3, h4 {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
+}
+
+.question-tick_box-checkbox {
+  margin-left: 25px;
 }
