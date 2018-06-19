@@ -23,6 +23,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {//Check it is coming from a form
     $u_hours = $_POST["survey_hours"];
     $u_email = $_POST["survey_email"];
 
+    $q0_score = $_POST["q0_score"];
+
     $q1_score = $_POST["q1_score"];
     $q1_tickbox = implode(', ', $_POST["q1_tickbox"]);
     $q1_explain = $_POST["q1_explain"];
@@ -67,6 +69,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {//Check it is coming from a form
     $q15_score = $_POST["q15_score"];
     $q15_explain = $_POST["q15_explain"];
 
+    $q16_tickbox = $_POST["q16_score"];
+    $q16_explain = $_POST["q16_explain"];
+
     //print "here";
 	//console_log("here");
 
@@ -80,11 +85,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {//Check it is coming from a form
 /*
 console_log($q1_score);
 console_log($q1_tickbox);
-console_log($q1_explain);    
+console_log($q1_explain);
 console_log($q2_score);
 console_log($q3_score);
 console_log($q3_tickbox);
-console_log($q3_explain);    
+console_log($q3_explain);
 console_log($q4_score);
 console_log($q5_score);
 console_log($q5_explain);
@@ -116,10 +121,10 @@ console_log($u_hours);
 console_log($u_email);
 */
 
-	$statement = $mysqli->prepare("INSERT INTO survey_data (q1_score, q1_tickbox, q1_explain, q2_score, q3_score, q3_tickbox, q3_explain, q4_score, q5_score, q5_tickbox, q5_explain, q6_score, q6_explain, q7_score,  q7_tickbox,  q7_explain, q8_score, q9_score, q9_explain, q10_score, q10_explain, q11_score, q12_score, q12_tickbox, q13_score, q13_tickbox, q14_score, q15_score, q15_explain, u_age, u_postcode, u_name, u_genre, u_skill, u_years, u_hours, u_email) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"); //prepare sql insert query
+	$statement = $mysqli->prepare("INSERT INTO survey_data (q0_score, q1_score, q1_tickbox, q1_explain, q2_score, q3_score, q3_tickbox, q3_explain, q4_score, q5_score, q5_tickbox, q5_explain, q6_score, q6_explain, q7_score,  q7_tickbox,  q7_explain, q8_score, q9_score, q9_explain, q10_score, q10_explain, q11_score, q12_score, q12_tickbox, q13_score, q13_tickbox, q14_score, q15_score, q15_explain, u_age, u_postcode, u_name, u_genre, u_skill, u_years, u_hours, u_email, q16_tickbox, q16_explain) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"); //prepare sql insert query
     //bind parameters for markers, where (s = string, i = integer, d = double,  b = blob)
 
-    $statement->bind_param('issiissiissisissiisisiisisiisissssiis', $q1_score,  $q1_tickbox, $q1_explain, $q2_score, $q3_score, $q3_tickbox, $q3_explain, $q4_score, $q5_score,  $q5_tickbox,  $q5_explain, $q6_score,  $q6_explain, $q7_score,  $q7_tickbox,  $q7_explain, $q8_score, $q9_score,  $q9_explain, $q10_score, $q10_explain, $q11_score, $q12_score, $q12_tickbox, $q13_score, $q13_tickbox, $q14_score, $q15_score, $q15_explain, $u_age, $u_postcode, $u_name, $u_genre, $u_skill, $u_years, $u_hours,$u_email); //bind values and execute insert query
+    $statement->bind_param('iissiissiissisissiisisiisisiisissssiisss', $q1_score, $q1_score,  $q1_tickbox, $q1_explain, $q2_score, $q3_score, $q3_tickbox, $q3_explain, $q4_score, $q5_score,  $q5_tickbox,  $q5_explain, $q6_score,  $q6_explain, $q7_score,  $q7_tickbox,  $q7_explain, $q8_score, $q9_score,  $q9_explain, $q10_score, $q10_explain, $q11_score, $q12_score, $q12_tickbox, $q13_score, $q13_tickbox, $q14_score, $q15_score, $q15_explain, $u_age, $u_postcode, $u_name, $u_genre, $u_skill, $u_years, $u_hours,$u_email, $q16_tickbox, $q16_explain); //bind values and execute insert query
 
     /*
     $statement = $mysqli->prepare("INSERT INTO survey_data (q1_score, q1_tickbox) VALUES(?, ?)");

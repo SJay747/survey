@@ -34,6 +34,33 @@
             <form method="post" action="process.php" target="_blank">
               <h3>Questionaire</h3>
               <p><strong>Out of the following statements please rate out of 1-5 how relevant they are to you. 5 being most relevant and 1 being least relevant:</strong></p>
+              <div class="q0 question">
+                <div class="question-title">
+                  <h4>I want to meet more musicians and artists.</h4>
+                </div>
+                <div class="question-score">
+                  <label class="question-score-label mdl-js-ripple-effect">
+                    <input id="q0-score-1" type="radio" name="q0_score" value="1" />
+                    <div for="q0-score-1" class=""><span>1</span></div>
+                  </label>
+                  <label class="question-score-label">
+                    <input id="q0-score-2" type="radio" name="q0_score" value="2" />
+                    <div for="q0-score-2" class=""><span>2</span></div>
+                  </label>
+                  <label class="question-score-label">
+                    <input id="q0-score-3" type="radio" name="q0_score" value="3" />
+                    <div for="q0-score-3" class=""><span>3</span></div>
+                  </label>
+                  <label class="question-score-label">
+                    <input id="q0-score-4" type="radio" name="q0_score" value="4" />
+                    <div for="q0-score-4" class=""><span>4</span></div>
+                  </label>
+                  <label class="question-score-label">
+                    <input id="q0-score-5" type="radio" name="q0_score" value="5" />
+                    <div for="q0-score-5" class=""><span>5</span></div>
+                  </label>
+                </div>
+              </div>
               <div class="q1 question">
                 <div class="question-title">
                   <h4>I find it very time consuming to meet new artists/musicians. Why?</h4>
@@ -607,6 +634,41 @@
                   </div>
                 </div>
               </div>
+              <div class="q16 question">
+                <div class="question-title">
+                  <h4>Which Social Media platforms do you use to interact with other musicians and artists?</h4>
+                </div>
+                <div class="question-tick_box">
+                  <p>Please tick boxes relevant to you.</p>
+                  <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="q16-checkbox-1">
+                    <input type="checkbox" id="q16-checkbox-1" name="q16_tickbox[]" value="a" class="mdl-checkbox__input" />
+                    <span class="mdl-checkbox__label">SoundCloud</span>
+                  </label>
+                  <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="q16-checkbox-2">
+                    <input type="checkbox" id="q16-checkbox-2" name="q16_tickbox[]" value="b" class="mdl-checkbox__input" />
+                    <span class="mdl-checkbox__label">Instagram</span>
+                  </label>
+                  <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="q16-checkbox-3">
+                    <input type="checkbox" id="q16-checkbox-3" name="q16_tickbox[]" value="c" class="mdl-checkbox__input" />
+                    <span class="mdl-checkbox__label">Facebook</span>
+                  </label>
+                  <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="q16-checkbox-4">
+                    <input type="checkbox" id="q16-checkbox-4" name="q16_tickbox[]" value="d" class="mdl-checkbox__input" />
+                    <span class="mdl-checkbox__label">Twitter</span>
+                  </label>
+                  <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="q16-checkbox-5">
+                    <input type="checkbox" id="q16-checkbox-5" name="q16_tickbox[]" value="e" class="mdl-checkbox__input" />
+                    <span class="mdl-checkbox__label">Other</span>
+                  </label>
+                </div>
+                <div class="question-explain">
+                  <div class="question-explain-label"><i>Please state other social media platforms you use:</i></div>
+                  <div class="mdl-textfield mdl-js-textfield">
+                    <textarea class="mdl-textfield__input" type="text" rows= "2" id="q16-explain" name="q16_explain"></textarea>
+                    <label class="mdl-textfield__label" for="q16-explain">Other</label>
+                  </div>
+                </div>
+              </div>
               <div class="details">
                 <h3>Details</h3>
                 <div class="details-box">
@@ -699,9 +761,9 @@
           <div class="mdl-mini-footer--left-section">
             <ul class="mdl-mini-footer--link-list">
               <li><a href="mailto:info@collabocollective.co.uk">info@collabocollective.co.uk</a></li>
-              <li><a href="#" class="fa fa-facebook"></a></li>
-              <li><a href="#" class="fa fa-instagram"></a></li>
-              <li><a href="#" class="fa fa-twitter"></a></li>
+              <li><a href="https://www.facebook.com/collaboconnekt" class="fa fa-facebook"></a></li>
+              <li><a href="https://www.instagram.com/collabouk/" class="fa fa-instagram"></a></li>
+              <li><a href="https://twitter.com/collabouk" class="fa fa-twitter"></a></li>
             </ul>
           </div>
         </footer>
