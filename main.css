@@ -265,6 +265,10 @@ h3, h4 {
   padding: 5px;
   padding-top: 15px;
   margin-bottom: 7px;
+  padding-bottom: : 15px;
+}
+
+.signup-text-text {
   text-align: center;
 }
 

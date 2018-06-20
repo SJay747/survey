@@ -14,6 +14,24 @@
     <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+    <title>Collabo</title>
+
+    <script type="text/javascript">
+      console.log("here");
+      function requireEmail() {
+        console.log("here also");
+        if(document.getElementById("email-check").checked)
+        {
+          document.getElementById("details-email").required = true;
+        }
+        else
+        {
+          document.getElementById("details-email").required = false;
+        }
+      }
+    </script>
+
   </head>
   <body>
     <div class="demo-layout mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100">
@@ -718,14 +736,20 @@
                   </div>
                 </div>
                 <div class="signup-text">
-                  <p>We are building a platform through which you will be able to connect with other like minded artists in the city. Drop us your email to keep in touch with our progress and launch date - and become eligible to win a full free day in a London recording studio!</p>
-                  <p style="text-align:center;"><strong>Your work on great music while we work on <i>Collabo</i>.</strong></p>
+                  <div class="signup-text-text">
+                    <p>We are building a platform through which you will be able to connect with other like minded artists in the city. Drop us your email to keep in touch with our progress and launch date - and become eligible to win a full free day in a London recording studio!</p>
+                    <p style="text-align:center;"><strong>Your work on great music while we work on <i>Collabo</i>.</strong></p>
+                  </div>
                 <!--<p>Please type in your email address:</p>-->
                   <div class="details-email mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                     <input class="mdl-textfield__input" type="text" name="survey_email" pattern="(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)" id="details-email">
                     <label class="mdl-textfield__label" for="details-email">Email Address</label>
                     <span class="mdl-textfield__error">Input is not an email address</span>
                   </div>
+                  <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="email-check">
+                    <input type="checkbox" id="email-check" class="mdl-checkbox__input" onclick="requireEmail()">
+                    <span class="mdl-checkbox__label">Check if you want to sign up to the mailing list</span>
+                  </label>
                 </div>
               </div>
               <!--<input type="submit" value="Submit" />-->
