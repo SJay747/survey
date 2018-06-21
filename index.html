@@ -736,19 +736,22 @@
                   </div>
                 </div>
                 <div class="signup-text">
-                   <p>We are building a platform through which you will be able to connect with other like minded artists in the city. Drop us your email to keep in touch with our progress and launch date - and become eligible to <strong>win a full free day in a London recording studio!</strong></p>
-                   <p style="text-align:center;"><strong>Your work on great music while we work on <i>Collabo</i>.</strong></p>
+                  <div class="signup-text-text">
+                    <p>We are building a platform through which you will be able to connect with other like minded artists in the city. Drop us your email to keep in touch with our progress and launch date and enter a draw to <strong>win a full free day in a London recording studio, a £50 GearBest Voucher or 2 tickets to Park Life 2019!</strong></p>
+                  </div>
                 <!--<p>Please type in your email address:</p>-->
+                  <div class="details-email mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="text" name="survey_email" pattern="(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)" id="details-email">
+                    <label class="mdl-textfield__label" for="details-email">Email Address</label>
+                    <span class="mdl-textfield__error">Input is not an email address</span>
+                  </div>
+                  <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="email-check">
+                    <input type="checkbox" id="email-check" class="mdl-checkbox__input" onclick="requireEmail()">
+                    <span class="mdl-checkbox__label">Check if you want to sign up to the mailing list</span>
+                  </label>
                 </div>
-                <div class="details-email mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                  <input class="mdl-textfield__input" type="text" name="survey_email" pattern="(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)" id="details-email">
-                  <label class="mdl-textfield__label" for="details-email">Email Address</label>
-                  <span class="mdl-textfield__error">Input is not an email address</span>
-                </div>
-                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="email-check">
-                  <input type="checkbox" id="email-check" class="mdl-checkbox__input" onclick="requireEmail()">
-                  <span class="mdl-checkbox__label">Check if you want to sign up to the mailing list</span>
-                </label>
+                <p>Thank you for filling out our survey. Drop us your email to keep in touch and enter a draw to receive a free day at a London recording studio. </p>
+                <p style="text-align:center;"><strong>Your work on great music while we work on <i>Collabo</i>.</strong></p>
               </div>
               <!--<input type="submit" value="Submit" />-->
               <div class="submit-button">
@@ -766,8 +769,16 @@
                 var showToastButton = document.querySelector('#demo-show-toast');
                 showToastButton.addEventListener('click', function() {
                   'use strict';
-                  var data = {message: 'Thank you for completing the survey'};
-                  snackbarContainer.MaterialSnackbar.showSnackbar(data);
+		  if(document.getElementById("details-email").required==true) {
+		    if(document.getElementById("details-email").value != "") {
+                      var data = {message: 'Thank you for completing the survey'};
+                      snackbarContainer.MaterialSnackbar.showSnackbar(data);
+ 		    }
+		  }
+		  else {
+		    var data = {message: 'Thank you for completing the survey'};
+                    snackbarContainer.MaterialSnackbar.showSnackbar(data);
+		  }
                 });
               }());
               </script>
