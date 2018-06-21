@@ -737,7 +737,7 @@
                 </div>
                 <div class="signup-text">
                   <div class="signup-text-text">
-                    <p>We are building a platform through which you will be able to connect with other like minded artists in the city. Drop us your email to keep in touch with our progress and launch date - and become eligible to win a full free day in a London recording studio!</p>
+                    <p>We are building a platform through which you will be able to connect with other like minded artists in the city. Drop us your email to keep in touch with our progress and launch date - and become eligible to <strong>win a full free day in a London recording studio!</strong></p>
                     <p style="text-align:center;"><strong>Your work on great music while we work on <i>Collabo</i>.</strong></p>
                   </div>
                 <!--<p>Please type in your email address:</p>-->
@@ -768,8 +768,16 @@
                 var showToastButton = document.querySelector('#demo-show-toast');
                 showToastButton.addEventListener('click', function() {
                   'use strict';
-                  var data = {message: 'Thank you for completing the survey'};
-                  snackbarContainer.MaterialSnackbar.showSnackbar(data);
+		  if(document.getElementById("details-email").required==true) {
+		    if(document.getElementById("details-email").value != "") {
+                      var data = {message: 'Thank you for completing the survey'};
+                      snackbarContainer.MaterialSnackbar.showSnackbar(data);
+ 		    }
+		  }
+		  else {
+		    var data = {message: 'Thank you for completing the survey'};
+                    snackbarContainer.MaterialSnackbar.showSnackbar(data);
+		  }
                 });
               }());
               </script>
